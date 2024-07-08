@@ -30,7 +30,7 @@ export default function Home() {
   }, [input])
 
   return (
-    <main className='h-screen w-screen flex items-center justify-center'>
+    <main className='h-screen w-screen flex flex-col items-center justify-center'>
       <div className=' duration-500 animate-in animate fade-in-5 slide-in-from-bottom-2.5'>
         <h1 className='text-4xl  md:text-6xl tracking-tight font-bold text-center'>SpeedSearch ⚡</h1>
         <p className='text-zinc-600 text-[0.7rem] md:text-lg max-w-prose text-center mt-4'>
@@ -38,8 +38,8 @@ export default function Home() {
           Type a query below and get your result in miliseconds.
         </p>
 
-        <div className='max-w-md w-full rounded-lg shadow-md flex items-center justify-center hover:shadow-lg transition duration-50 mt-2'>
-          <Command className=' md:w-full flex items-center'>
+        <div className='max-w-md w-full rounded-lg shadow-md flex items-center hover:shadow-lg transition duration-50 mt-2'>
+          <Command className=' md:w-full flex'>
             <CommandInput
               value={input}
               onValueChange={setInput}
@@ -52,9 +52,9 @@ export default function Home() {
               ) : null}
 
               {searchresult?.result ? (
-                <CommandGroup heading='Result' className=' text-2xl'>
+                <CommandGroup heading='Result' className='text-2xl'>
                   {searchresult?.result.map((result) => (
-                    <CommandItem className=' md:text-2xl font-semibold'
+                    <CommandItem className=' md:text-xl font-semibold'
                       key={result}
                       value={result}
                       onSelect={setInput}>
@@ -77,6 +77,9 @@ export default function Home() {
             </CommandList>
           </Command>
         </div>
+      </div>
+      <div className='text-center font-semibold text-slate-600 p-4 text-xs md:text-lg'>
+        Made by Jayant Issar
       </div>
     </main>
   )

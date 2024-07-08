@@ -1,0 +1,6 @@
+name = "fastapi"
+compatibility_date = "2024-04-02"
+
+[vars]
+UPSTASH_REDIS_REST_URL="https://on-piglet-31901.upstash.io"
+UPSTASH_REDIS_REST_TOKEN="AXydAAIncDE4Y2FjMTQ5MmNlZmI0NzY5YjgyZjA0ZDdmNjI2YzgyOHAxMzE5MDE"
